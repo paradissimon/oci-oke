@@ -1,7 +1,7 @@
 # Reference: https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/terraformconfigresourcemanager_topic-schema.htm
 title: "OCI Kubernetes"
 description: "OCI Kubernetes Stack"
-informationalText: "Deploys OKE Kubernetes clusters using only resources available in the Always Free offering."
+informationalText: "Deploys OKE Kubernetes clusters using only resources that would fit the Always Free offering limitations"
 schemaVersion: 1.1.0
 version: "20190304"
 
@@ -13,3 +13,18 @@ variableGroups:
       - tenancy_ocid
       - compartment_ocid
       - region
+
+#############################################################################
+# Account Information
+#############################################################################
+tenancy_ocid:
+  type: string
+  required: true
+
+compartment_ocid:
+  type: oci:identity:compartment:id
+  required: true
+
+region:
+  type: oci:identity:region:name
+  required: true
