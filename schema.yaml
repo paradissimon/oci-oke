@@ -14,17 +14,18 @@ variableGroups:
       - compartment_ocid
       - region
 
-#############################################################################
-# Account Information
-#############################################################################
-tenancy_ocid:
-  type: string
-  required: true
+variables:
+  #############################################################################
+  # Account Information
+  #############################################################################
+  tenancy_ocid:
+    type: string
+    required: true
 
-compartment_ocid:
-  type: oci:identity:compartment:id
-  required: true
+  compartment_ocid:
+    type: oci:identity:compartment:id
+    required: true
 
-region:
-  type: oci:identity:region:name
-  required: true
+  region:
+    type: oci:identity:region:name
+    required: true
